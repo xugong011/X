@@ -1,7 +1,7 @@
 // 站点品牌信息（占位，后续替换成你的真实信息）
 export const siteConfig = {
-  name: "粉萌衣橱",
-  nameEn: "PINKMOCHI",
+  name: "西宫赋",
+  nameEn: "XIGONGFU",
   slogan: "Sweet & Pretty · 韩系甜心衣橱",
   intro:
     "一家专注韩系甜美风的小众女装店。我们用心挑选每一件，只想把软软的温柔穿在你身上。",

@@ -26,8 +26,8 @@ export default function Hero() {
       {/* 主视觉占位 */}
       <div className="relative aspect-[4/5] w-full overflow-hidden bg-brand-100">
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="select-none font-display text-8xl tracking-[0.3em] text-brand-300">
-            PM
+          <span className="select-none font-display text-6xl tracking-[0.25em] text-brand-300">
+            {siteConfig.name}
           </span>
         </div>
         <span className="absolute bottom-6 right-7 text-xs tracking-[0.2em] text-cocoa-light">

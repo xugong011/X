@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getProductBySlug, products } from "@/data/products";
 import { CATEGORY_LABELS } from "@/types/product";
 import { formatPrice, toInitials } from "@/lib/utils";
-import Button from "@/components/ui/Button";
+import AddToCart from "@/components/product/AddToCart";
 import { siteConfig } from "@/data/site";
 
 export function generateStaticParams() {
@@ -43,7 +43,7 @@ export default async function ProductDetailPage({
 
       <div className="grid gap-12 md:grid-cols-2">
         {/* 主图占位 */}
-        <div className="relative aspect-[3/4] w-full overflow-hidden bg-brand-100">
+        <div className="relative aspect-[3/4] w-full overflow-hidden bg-brand-100 md:sticky md:top-24 md:self-start">
           <div className="absolute inset-0 flex items-center justify-center">
             <span className="select-none font-display text-8xl tracking-[0.3em] text-brand-300">
               {toInitials(product.nameEn)}
@@ -75,36 +75,12 @@ export default async function ProductDetailPage({
             )}
           </div>
 
-          <p className="mt-6 leading-relaxed text-cocoa-light">{product.description}</p>
+          <p className="mt-6 leading-relaxed text-cocoa-light">
+            {product.description}
+          </p>
 
-          {/* 颜色 */}
-          <div className="mt-8">
-            <h3 className="text-xs tracking-widest text-cocoa">颜色</h3>
-            <div className="mt-3 flex gap-2">
-              {product.colors.map((color) => (
-                <span
-                  key={color}
-                  className="h-7 w-7 rounded-full ring-1 ring-brand-300"
-                  style={{ backgroundColor: color }}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* 尺码 */}
-          <div className="mt-8">
-            <h3 className="text-xs tracking-widest text-cocoa">尺码</h3>
-            <div className="mt-3 flex flex-wrap gap-2">
-              {product.sizes.map((size) => (
-                <span
-                  key={size}
-                  className="border border-brand-300 px-4 py-1.5 text-sm text-cocoa"
-                >
-                  {size}
-                </span>
-              ))}
-            </div>
-          </div>
+          {/* 规格选择 + 加入购物车 */}
+          <AddToCart product={product} />
 
           {/* 标签 */}
           <div className="mt-8 flex flex-wrap gap-2">
@@ -119,9 +95,10 @@ export default async function ProductDetailPage({
           </div>
 
           {/* 下单引导 */}
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <Button href="/contact">微信联系下单</Button>
-            <p className="text-sm text-cocoa-light">添加微信 {siteConfig.wechat}</p>
+          <div className="mt-8 border-t border-brand-200 pt-6">
+            <p className="text-sm text-cocoa-light">
+              下单问题可加微信 {siteConfig.wechat}
+            </p>
           </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+import { siteConfig } from "@/data/site";
+
 const HIGHLIGHTS = [
   {
     title: "韩系精选",
@@ -18,7 +20,7 @@ export default function Story() {
     <section className="border-t border-brand-200">
       <div className="mx-auto max-w-6xl px-6 py-20">
         <div className="mb-12 max-w-2xl">
-          <h2 className="font-display text-3xl text-cocoa">关于粉萌衣橱</h2>
+          <h2 className="font-display text-3xl text-cocoa">关于 {siteConfig.name}</h2>
           <p className="mt-4 leading-relaxed text-cocoa-light">
             我们相信，好看的衣服是写给自己的情书。做一个甜甜的女孩，从一件对的衣服开始。
           </p>
