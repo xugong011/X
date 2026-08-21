@@ -29,9 +29,8 @@ export default function ProductCard({ product }: { product: Product }) {
     >
       {/* 图片占位 / 后续替换为 <Image> */}
       <div
-        className={`relative aspect-[3/4] w-full bg-gradient-to-br ${gradient} flex items-center justify-center`}
+        className={`relative aspect-[3/4] w-full bg-gradient-to-br ${gradient}`}
       >
-        <span className="text-6xl drop-shadow-sm select-none">🧸</span>
         {product.tags.includes("热卖") && (
           <span className="absolute left-3 top-3 rounded-full bg-brand-500 px-2.5 py-1 text-xs font-medium text-white">
             HOT

@@ -24,7 +24,7 @@ export default function CollectionPage() {
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-12">
-      <h1 className="text-3xl font-bold text-cocoa">商品橱窗 ♡</h1>
+      <h1 className="text-3xl font-bold text-cocoa">商品橱窗</h1>
       <p className="mt-2 text-sm text-cocoa-light">
         {currentLabel} · 共 {filtered.length} 件
       </p>

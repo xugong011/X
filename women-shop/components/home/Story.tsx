@@ -1,16 +1,13 @@
 const HIGHLIGHTS = [
   {
-    emoji: "🎀",
     title: "韩系精选",
     desc: "紧跟首尔流行趋势，用心挑每一件好看又好穿的单品。",
   },
   {
-    emoji: "☁️",
     title: "温柔质感",
     desc: "亲肤柔软的面料，穿上的那一刻就像被云朵轻轻抱住。",
   },
   {
-    emoji: "💌",
     title: "甜心服务",
     desc: "微信一对一选款，支持上门试穿，做你的专属搭配师。",
   },
@@ -33,8 +30,7 @@ export default function Story() {
               key={item.title}
               className="rounded-3xl border border-brand-100 bg-white p-6 text-center shadow-soft"
             >
-              <span className="text-4xl">{item.emoji}</span>
-              <h3 className="mt-4 font-bold text-cocoa">{item.title}</h3>
+              <h3 className="font-bold text-cocoa">{item.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-cocoa-light">{item.desc}</p>
             </div>
           ))}

@@ -9,7 +9,7 @@ export default function Featured() {
     <section className="mx-auto max-w-6xl px-4 py-12">
       <div className="mb-8 flex items-end justify-between">
         <div>
-          <h2 className="text-2xl font-bold text-cocoa sm:text-3xl">本期精选 ♡</h2>
+          <h2 className="text-2xl font-bold text-cocoa sm:text-3xl">本期精选</h2>
           <p className="mt-2 text-sm text-cocoa-light">
             店长私藏的几件，闭眼入都不会错
           </p>

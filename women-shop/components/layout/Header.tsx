@@ -11,8 +11,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-brand-100 bg-cream/80 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5">
-        <Link href="/" className="flex items-center gap-2 text-xl font-bold text-brand-600">
-          <span className="text-2xl">🍑</span>
+        <Link href="/" className="text-xl font-bold text-brand-600">
           {siteConfig.name}
         </Link>
 

@@ -5,7 +5,7 @@ export default function ProductGrid({ products }: { products: Product[] }) {
   if (products.length === 0) {
     return (
       <p className="py-16 text-center text-cocoa-light">
-        这个分类下暂时没有商品，敬请期待 ♡
+        这个分类下暂时没有商品，敬请期待
       </p>
     );
   }

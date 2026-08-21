@@ -44,12 +44,10 @@ export default async function ProductDetailPage({
       <div className="grid gap-10 md:grid-cols-2">
         {/* 主图占位 */}
         <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[2rem] bg-gradient-to-br from-brand-100 via-blush to-lilac shadow-soft">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-9xl drop-shadow-sm">👗</span>
-          </div>
+          
           {product.tags.includes("热卖") && (
             <span className="absolute left-5 top-5 rounded-full bg-brand-500 px-3 py-1.5 text-sm font-medium text-white">
-              🔥 热卖单品
+              HOT · 热卖单品
             </span>
           )}
         </div>
@@ -119,7 +117,7 @@ export default async function ProductDetailPage({
 
           {/* 下单引导 */}
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Button href="/contact">微信联系下单 ♡</Button>
+            <Button href="/contact">微信联系下单</Button>
             <p className="text-sm text-cocoa-light">
               添加微信 {siteConfig.wechat}，一对一选款
             </p>

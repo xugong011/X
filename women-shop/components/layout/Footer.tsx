@@ -7,8 +7,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:grid-cols-3">
         {/* 品牌 */}
         <div>
-          <div className="flex items-center gap-2 text-lg font-bold text-brand-600">
-            <span>🍑</span>
+          <div className="text-lg font-bold text-brand-600">
             {siteConfig.name}
           </div>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-cocoa-light">

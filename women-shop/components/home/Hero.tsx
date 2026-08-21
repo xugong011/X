@@ -7,7 +7,7 @@ export default function Hero() {
       {/* 文案 */}
       <div className="text-center md:text-left">
         <span className="inline-block rounded-full bg-brand-100 px-4 py-1.5 text-sm font-medium text-brand-600">
-          🌸 韩系甜美 · 小众选款
+          韩系甜美 · 小众选款
         </span>
         <h1 className="korean-heart mt-5 text-4xl font-bold leading-tight text-cocoa sm:text-5xl">
           {siteConfig.name}
@@ -18,7 +18,7 @@ export default function Hero() {
           {siteConfig.intro}
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start">
-          <Button href="/collection">逛逛商品 ♡</Button>
+          <Button href="/collection">逛逛商品</Button>
           <Button href="/about" variant="outline">
             认识我们
           </Button>
@@ -30,8 +30,7 @@ export default function Hero() {
         <div className="absolute inset-0 -rotate-3 rounded-[2.5rem] bg-gradient-to-br from-brand-200 via-blush to-lilac shadow-soft" />
         <div className="absolute inset-0 rotate-2 rounded-[2.5rem] bg-white/40 backdrop-blur-sm" />
         <div className="absolute inset-6 flex flex-col items-center justify-center rounded-[2rem] bg-cream/80 text-center">
-          <span className="text-7xl">👗</span>
-          <p className="mt-4 px-6 text-sm text-cocoa-light">
+          <p className="px-6 text-sm text-cocoa-light">
             这里是你的主视觉图位 —— 后续替换成店铺招牌照即可
           </p>
         </div>
