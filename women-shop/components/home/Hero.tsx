@@ -7,7 +7,7 @@ export default function Hero() {
       {/* 文案 */}
       <div>
         <p className="text-xs uppercase tracking-[0.35em] text-cocoa-light">
-          Korean Style · Womenswear
+          Oriental Minimalism · Womenswear
         </p>
         <h1 className="mt-6 font-display text-4xl leading-tight text-cocoa sm:text-6xl">
           {siteConfig.name}

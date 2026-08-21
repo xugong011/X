@@ -10,7 +10,7 @@ export default function AboutPage() {
           {siteConfig.intro}
         </p>
         <p className="mx-auto mt-4 max-w-xl leading-relaxed text-cocoa-light">
-          从第一件衣服开始，我们就想做一个「让人穿了会笑」的小店。不追爆款，只选那些真正衬你、让你自在又自信的单品。每一件都经过我们反复试穿，确认版型、面料、颜色都刚刚好，才会挂上货架。
+          从第一件衣服开始，我们就想做一个「以留白见风格」的小店。不追爆款，只选那些真正衬你、让你自在又自信的单品。每一件都经过我们反复试穿，确认版型、面料、颜色都刚刚好，才会挂上货架。
         </p>
       </section>
 

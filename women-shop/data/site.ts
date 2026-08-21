@@ -2,13 +2,13 @@
 export const siteConfig = {
   name: "西宫赋",
   nameEn: "XIGONGFU",
-  slogan: "Sweet & Pretty · 韩系甜心衣橱",
+  slogan: "水墨留白 · 黑白极简女装",
   intro:
-    "一家专注韩系甜美风的小众女装店。我们用心挑选每一件，只想把软软的温柔穿在你身上。",
-  wechat: "PinkMochi_Official",
+    "一家专注东方留白美学的小众女装店。以黑白灰为底色，去繁就简，只为你挑那些干净、耐看、经得起时间的好衣裳。",
+  wechat: "Xigongfu_Official",
   phone: "138-0000-0000",
-  address: "上海市黄浦区甜爱路 88 号",
-  email: "hello@pinkmochi.com",
+  address: "上海市静安区常德路 88 号",
+  email: "hello@xigongfu.com",
   hours: "每天 10:00 - 22:00",
 };
 

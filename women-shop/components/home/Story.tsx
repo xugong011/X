@@ -2,16 +2,16 @@ import { siteConfig } from "@/data/site";
 
 const HIGHLIGHTS = [
   {
-    title: "韩系精选",
-    desc: "紧跟首尔流行趋势，用心挑每一件好看又好穿的单品。",
+    title: "东方甄选",
+    desc: "以黑白灰为底色，去繁就简，只挑干净耐看、经得起时间的好衣裳。",
   },
   {
-    title: "温柔质感",
-    desc: "亲肤柔软的面料，穿上的那一刻就像被云朵轻轻抱住。",
+    title: "留白剪裁",
+    desc: "利落的线条与挺括面料，上身自在，穿出不动声色的好气质。",
   },
   {
-    title: "甜心服务",
-    desc: "微信一对一选款，支持上门试穿，做你的专属搭配师。",
+    title: "贴心服务",
+    desc: "微信一对一选款，支持到店试穿，帮你搭出属于你的留白穿搭。",
   },
 ];
 
@@ -22,7 +22,7 @@ export default function Story() {
         <div className="mb-12 max-w-2xl">
           <h2 className="font-display text-3xl text-cocoa">关于 {siteConfig.name}</h2>
           <p className="mt-4 leading-relaxed text-cocoa-light">
-            我们相信，好看的衣服是写给自己的情书。做一个甜甜的女孩，从一件对的衣服开始。
+            好看的衣裳，是写给自己的留白。从一件对的衣服开始，穿出属于你的从容。
           </p>
         </div>
 
