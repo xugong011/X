@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* ============================================
+   韩流可爱风主题变量
+   （改这里即可一键调整整套视觉配色）
+   ============================================ */
+@theme {
+  /* 品牌主色：樱花粉 */
+  --color-brand-50: #fff5f8;
+  --color-brand-100: #ffe4ee;
+  --color-brand-200: #ffc9dd;
+  --color-brand-300: #ffa3c7;
+  --color-brand-400: #ff7eb3;
+  --color-brand-500: #f45f9e;
+  --color-brand-600: #e0468a;
+  --color-brand-700: #c23372;
+
+  /* 辅助色 */
+  --color-cream: #fffaf5; /* 奶油白 */
+  --color-blush: #fff0f5; /* 腮红粉 */
+  --color-lilac: #c9b8ff; /* 丁香紫 */
+  --color-mint: #b6e8d4; /* 薄荷绿 */
+
+  /* 文字色 */
+  --color-cocoa: #4a3a44; /* 主文字（可可棕） */
+  --color-cocoa-light: #8d7a85; /* 次要文字 */
+
+  /* 圆润字体栈（中文为主，英文圆体兜底） */
+  --font-sans: ui-rounded, "SF Pro Rounded", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", system-ui, sans-serif;
+}
+
+:root {
+  --background: #fffaf8;
+  --foreground: #4a3a44;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 可爱的粉白圆点背景纹理 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image: radial-gradient(#ffd9e6 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.35;
+}
+
+/* 通用手写感强调文本（用于 slogan 等） */
+.korean-heart {
+  letter-spacing: 0.02em;
+}
+
+/* 柔和悬浮阴影 */
+.shadow-soft {
+  box-shadow: 0 12px 32px -12px rgba(244, 95, 158, 0.35);
+}
