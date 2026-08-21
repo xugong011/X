@@ -23,23 +23,23 @@ export default function CollectionPage() {
   const currentLabel = active === "all" ? "全部" : CATEGORY_LABELS[active];
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-12">
-      <h1 className="text-3xl font-bold text-cocoa">商品橱窗</h1>
-      <p className="mt-2 text-sm text-cocoa-light">
+    <section className="mx-auto max-w-6xl px-6 py-14">
+      <h1 className="font-display text-4xl text-cocoa">商品橱窗</h1>
+      <p className="mt-3 text-sm text-cocoa-light">
         {currentLabel} · 共 {filtered.length} 件
       </p>
 
       {/* 分类筛选 */}
-      <div className="mt-6 flex flex-wrap gap-2">
+      <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 border-b border-brand-200 pb-5">
         {FILTERS.map((f) => (
           <button
             key={f.key}
             type="button"
             onClick={() => setActive(f.key)}
-            className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+            className={`text-sm tracking-widest transition-colors ${
               active === f.key
-                ? "bg-brand-500 text-white shadow-soft"
-                : "border border-brand-200 bg-white text-cocoa hover:bg-brand-50"
+                ? "text-cocoa underline underline-offset-8"
+                : "text-cocoa-light hover:text-cocoa"
             }`}
           >
             {f.label}
@@ -47,7 +47,7 @@ export default function CollectionPage() {
         ))}
       </div>
 
-      <div className="mt-8">
+      <div className="mt-10">
         <ProductGrid products={filtered} />
       </div>
     </section>

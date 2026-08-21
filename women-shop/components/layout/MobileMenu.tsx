@@ -11,14 +11,14 @@ export default function MobileMenu({
   if (!open) return null;
 
   return (
-    <div className="border-t border-brand-100 bg-cream md:hidden">
-      <div className="flex flex-col px-4 py-2">
+    <div className="border-t border-brand-200 bg-[#fafafa] md:hidden">
+      <div className="flex flex-col px-6 py-4">
         {navLinks.map((link) => (
           <Link
             key={link.href}
             href={link.href}
             onClick={onClose}
-            className="rounded-xl px-3 py-3 font-medium text-cocoa transition-colors hover:bg-brand-50 hover:text-brand-600"
+            className="py-3 text-sm tracking-widest text-cocoa transition-colors hover:text-cocoa-light"
           >
             {link.label}
           </Link>

@@ -1,58 +1,40 @@
 import Link from "next/link";
 import type { Product } from "@/types/product";
 import { CATEGORY_LABELS } from "@/types/product";
-import { formatPrice } from "@/lib/utils";
-
-// 占位渐变（商品没有真实图片时使用）
-const GRADIENTS = [
-  "from-brand-100 via-brand-200 to-brand-300",
-  "from-brand-100 via-cream to-lilac",
-  "from-cream via-blush to-brand-200",
-  "from-lilac via-brand-100 to-blush",
-];
-
-function pickGradient(slug: string): string {
-  let hash = 0;
-  for (let i = 0; i < slug.length; i++) {
-    hash = (hash * 31 + slug.charCodeAt(i)) % 997;
-  }
-  return GRADIENTS[hash % GRADIENTS.length];
-}
+import { formatPrice, toInitials } from "@/lib/utils";
 
 export default function ProductCard({ product }: { product: Product }) {
-  const gradient = pickGradient(product.slug);
-
   return (
-    <Link
-      href={`/collection/${product.slug}`}
-      className="group overflow-hidden rounded-3xl border border-brand-100 bg-white shadow-soft transition-transform duration-300 hover:-translate-y-1.5"
-    >
-      {/* 图片占位 / 后续替换为 <Image> */}
-      <div
-        className={`relative aspect-[3/4] w-full bg-gradient-to-br ${gradient}`}
-      >
+    <Link href={`/collection/${product.slug}`} className="group">
+      {/* 占位图 */}
+      <div className="relative aspect-[3/4] w-full overflow-hidden bg-brand-100 transition-colors duration-300 group-hover:bg-brand-200">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="select-none font-display text-4xl tracking-[0.25em] text-brand-400 transition-colors group-hover:text-brand-500">
+            {toInitials(product.nameEn)}
+          </span>
+        </div>
         {product.tags.includes("热卖") && (
-          <span className="absolute left-3 top-3 rounded-full bg-brand-500 px-2.5 py-1 text-xs font-medium text-white">
+          <span className="absolute left-3 top-3 bg-brand-500 px-2 py-0.5 text-[10px] tracking-widest text-white">
             HOT
           </span>
         )}
       </div>
 
-      <div className="p-4">
-        <p className="text-xs text-cocoa-light">{CATEGORY_LABELS[product.category]}</p>
-        <h3 className="mt-1 truncate font-medium text-cocoa group-hover:text-brand-600">
+      <div className="pt-4 text-center">
+        <p className="text-[11px] uppercase tracking-[0.2em] text-cocoa-light">
+          {CATEGORY_LABELS[product.category]}
+        </p>
+        <h3 className="mt-1.5 truncate text-sm text-cocoa transition-opacity group-hover:opacity-70">
           {product.name}
         </h3>
-        <div className="mt-2 flex items-baseline gap-2">
-          <span className="text-lg font-bold text-brand-600">
-            {formatPrice(product.price)}
-          </span>
+        <p className="mt-1.5 text-sm text-cocoa">
+          {formatPrice(product.price)}
           {product.originalPrice && (
-            <span className="text-sm text-cocoa-light line-through">
+            <span className="ml-2 text-cocoa-light line-through">
               {formatPrice(product.originalPrice)}
             </span>
           )}
-        </div>
+        </p>
       </div>
     </Link>
   );

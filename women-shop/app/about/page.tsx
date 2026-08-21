@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <>
       <section className="mx-auto max-w-3xl px-4 py-16 text-center">
-        <h1 className="text-3xl font-bold text-cocoa sm:text-4xl">关于 {siteConfig.name}</h1>
+        <h1 className="font-display text-4xl text-cocoa sm:text-5xl">关于 {siteConfig.name}</h1>
         <p className="mx-auto mt-5 max-w-xl leading-relaxed text-cocoa-light">
           {siteConfig.intro}
         </p>
@@ -17,7 +17,7 @@ export default function AboutPage() {
       <Story />
 
       <section className="mx-auto max-w-3xl px-4 py-16 text-center">
-        <h2 className="text-2xl font-bold text-cocoa">我们的承诺</h2>
+        <h2 className="font-display text-3xl text-cocoa">我们的承诺</h2>
         <ul className="mx-auto mt-6 max-w-md space-y-3 text-left text-sm text-cocoa-light">
           <li>严选面料，亲肤透气，从源头把控品质。</li>
           <li>真实尺码参考 + 一对一选款，减少退换烦恼。</li>

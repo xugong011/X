@@ -13,7 +13,7 @@ export default function ContactPage() {
   return (
     <section className="mx-auto max-w-3xl px-4 py-16">
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-cocoa sm:text-4xl">联系我们</h1>
+        <h1 className="font-display text-4xl text-cocoa sm:text-5xl">联系我们</h1>
         <p className="mt-3 text-cocoa-light">有任何喜欢的款式，欢迎随时来聊。</p>
       </div>
 
@@ -21,7 +21,7 @@ export default function ContactPage() {
         {CONTACTS.map((item) => (
           <div
             key={item.label}
-            className="flex items-center gap-4 rounded-2xl border border-brand-100 bg-white p-5 shadow-soft"
+            className="flex items-center gap-4 border border-brand-200 bg-white px-6 py-5"
           >
             <div>
               <p className="text-xs text-cocoa-light">{item.label}</p>
@@ -32,8 +32,8 @@ export default function ContactPage() {
         ))}
       </div>
 
-      <div className="mt-10 rounded-3xl bg-brand-50 p-8 text-center">
-        <h2 className="text-xl font-bold text-cocoa">想来店里试试吗？</h2>
+      <div className="mt-10 bg-brand-100 p-10 text-center">
+        <h2 className="font-display text-2xl text-cocoa">想来店里试试吗？</h2>
         <p className="mt-2 text-sm leading-relaxed text-cocoa-light">
           门店支持到店试穿与搭配建议，欢迎提前微信预约。
         </p>

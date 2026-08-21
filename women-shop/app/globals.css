@@ -1,38 +1,39 @@
 @import "tailwindcss";
 
 /* ============================================
-   黑白极简主题变量
-   （改这里即可一键调整整套视觉配色）
+   黑白极简主题
    ============================================ */
 @theme {
-  /* 主色：黑白灰阶 */
+  /* 灰阶 */
   --color-brand-50: #fafafa;
-  --color-brand-100: #f4f4f5;
-  --color-brand-200: #e4e4e7;
-  --color-brand-300: #d4d4d8;
-  --color-brand-400: #a1a1aa;
-  --color-brand-500: #18181b; /* 主按钮 / 强调 = 近黑 */
-  --color-brand-600: #3f3f46; /* 深灰 */
-  --color-brand-700: #27272a;
+  --color-brand-100: #f0f0f0;
+  --color-brand-200: #e5e5e5;
+  --color-brand-300: #d4d4d4;
+  --color-brand-400: #a3a3a3;
+  --color-brand-500: #171717; /* 主按钮 / 强调 = 近黑 */
+  --color-brand-600: #404040; /* 深灰 */
+  --color-brand-700: #262626;
 
-  /* 辅助色（中性灰） */
+  /* 辅助（中性灰） */
   --color-cream: #ffffff;
-  --color-blush: #f4f4f5;
-  --color-lilac: #d4d4d8;
-  --color-mint: #a1a1aa;
+  --color-blush: #f0f0f0;
+  --color-lilac: #d4d4d4;
+  --color-mint: #a3a3a3;
 
-  /* 文字色 */
-  --color-cocoa: #0a0a0a; /* 主文字（黑） */
-  --color-cocoa-light: #71717a; /* 次要文字（灰） */
+  /* 文字 */
+  --color-cocoa: #111111;
+  --color-cocoa-light: #666666;
 
-  /* 字体栈 */
-  --font-sans: ui-sans-serif, "SF Pro Text", "PingFang SC",
-    "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", system-ui, sans-serif;
+  /* 字体：正文无衬线 + 展示衬线（时尚杂志感） */
+  --font-sans: ui-sans-serif, system-ui, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", sans-serif;
+  --font-display: Georgia, "Times New Roman", "Songti SC", "STSong",
+    "Noto Serif SC", serif;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
+  --background: #fafafa;
+  --foreground: #111111;
 }
 
 html {
@@ -46,12 +47,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* 通用强调文本 */
-.korean-heart {
-  letter-spacing: 0.02em;
-}
-
-/* 柔和悬浮阴影（中性黑） */
+/* 柔和悬浮阴影 */
 .shadow-soft {
-  box-shadow: 0 12px 32px -16px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 20px 40px -28px rgba(0, 0, 0, 0.24);
 }
