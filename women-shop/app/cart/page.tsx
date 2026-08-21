@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useCart } from "@/components/cart/CartProvider";
 import { getProductBySlug } from "@/data/products";
 import { formatPrice } from "@/lib/utils";
@@ -36,14 +37,24 @@ export default function CartPage() {
                 key={`${item.slug}-${item.size}-${item.color}`}
                 className="flex gap-4 py-6"
               >
-                {/* 缩略图占位 */}
+                {/* 缩略图 */}
                 <Link
                   href={`/collection/${product.slug}`}
-                  className="flex h-28 w-20 shrink-0 items-center justify-center bg-brand-100"
+                  className="relative h-28 w-20 shrink-0 overflow-hidden bg-brand-100"
                 >
-                  <span className="font-display text-sm tracking-widest text-brand-400">
-                    {product.nameEn.charAt(0)}
-                  </span>
+                  {product.image ? (
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      sizes="80px"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <span className="absolute inset-0 flex items-center justify-center font-display text-sm tracking-widest text-brand-400">
+                      {product.nameEn.charAt(0)}
+                    </span>
+                  )}
                 </Link>
 
                 <div className="flex flex-1 flex-col justify-between">

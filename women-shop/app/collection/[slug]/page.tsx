@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getProductBySlug, products } from "@/data/products";
 import { CATEGORY_LABELS } from "@/types/product";
@@ -42,16 +43,26 @@ export default async function ProductDetailPage({
       </nav>
 
       <div className="grid gap-12 md:grid-cols-2">
-        {/* 主图占位 */}
+        {/* 主图 */}
         <div className="relative aspect-[3/4] w-full overflow-hidden bg-brand-100 md:sticky md:top-24 md:self-start">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="select-none font-display text-8xl tracking-[0.3em] text-brand-300">
-              {toInitials(product.nameEn)}
-            </span>
-          </div>
-          {product.tags.includes("热卖") && (
+          {product.image ? (
+            <Image
+              src={product.image}
+              alt={product.name}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="select-none font-display text-8xl tracking-[0.3em] text-brand-300">
+                {toInitials(product.nameEn)}
+              </span>
+            </div>
+          )}
+          {product.tags.includes("新品") && (
             <span className="absolute left-4 top-4 bg-brand-500 px-2.5 py-1 text-[11px] tracking-widest text-white">
-              HOT
+              NEW
             </span>
           )}
         </div>
