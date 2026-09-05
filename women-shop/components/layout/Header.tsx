@@ -6,6 +6,7 @@ import { navLinks, siteConfig } from "@/data/site";
 import MobileMenu from "./MobileMenu";
 import { useCart } from "@/components/cart/CartProvider";
 import { useWishlist } from "@/components/wishlist/WishlistProvider";
+import { useAuth } from "@/components/auth/AuthProvider";
 
 function CartIcon() {
   return (
@@ -48,6 +49,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const { totalQuantity } = useCart();
   const { count: wishlistCount } = useWishlist();
+  const { isLoggedIn } = useAuth();
 
   const cartTrigger = (
     <Link
@@ -61,6 +63,19 @@ export default function Header() {
           {totalQuantity}
         </span>
       )}
+    </Link>
+  );
+
+  const userTrigger = (
+    <Link
+      href={isLoggedIn ? "/member" : "/login"}
+      aria-label={isLoggedIn ? "会员中心" : "登录"}
+      className="flex h-10 w-10 items-center justify-center text-cocoa transition-colors hover:text-cocoa-light"
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+        <circle cx="12" cy="7" r="4" />
+      </svg>
     </Link>
   );
 
@@ -99,12 +114,14 @@ export default function Header() {
           ))}
           {wishlistTrigger}
           {cartTrigger}
+          {userTrigger}
         </div>
 
-        {/* 移动端：心愿单 + 购物车 + 汉堡 */}
+        {/* 移动端：心愿单 + 购物车 + 用户 + 汉堡 */}
         <div className="flex items-center md:hidden">
           {wishlistTrigger}
           {cartTrigger}
+          {userTrigger}
           <button
             type="button"
             aria-label="菜单"

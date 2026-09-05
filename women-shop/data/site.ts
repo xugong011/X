@@ -16,6 +16,8 @@ export const siteConfig = {
 export const navLinks = [
   { label: "首页", href: "/" },
   { label: "商品橱窗", href: "/collection" },
+  { label: "新品日历", href: "/new-arrivals" },
+  { label: "买家秀", href: "/looks" },
   { label: "关于我们", href: "/about" },
   { label: "联系", href: "/contact" },
 ];

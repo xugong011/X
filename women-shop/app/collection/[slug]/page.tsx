@@ -8,6 +8,10 @@ import AddToCart from "@/components/product/AddToCart";
 import ProductGallery from "@/components/product/ProductGallery";
 import SizeChart from "@/components/product/SizeChart";
 import WishlistButton from "@/components/wishlist/WishlistButton";
+import HistoryTracker from "@/components/history/HistoryTracker";
+import Reviews from "@/components/product/Reviews";
+import SimilarProducts from "@/components/product/SimilarProducts";
+import BundleOffer from "@/components/product/BundleOffer";
 import { siteConfig } from "@/data/site";
 
 export function generateStaticParams() {
@@ -66,7 +70,7 @@ export default async function ProductDetailPage({
               </h1>
               <p className="mt-2 text-sm text-cocoa-light">{product.nameEn}</p>
             </div>
-            <WishlistButton slug={product.slug} />
+            <WishlistButton slug={product.slug} price={product.price} />
           </div>
 
           <div className="mt-6 flex items-baseline gap-3">
@@ -108,6 +112,15 @@ export default async function ProductDetailPage({
           </div>
         </div>
       </div>
+
+      {/* 搭配套装 */}
+      <BundleOffer product={product} />
+
+      {/* 评价晒单 */}
+      <Reviews slug={product.slug} />
+
+      {/* 相似推荐 */}
+      <SimilarProducts product={product} />
     </section>
   );
 }

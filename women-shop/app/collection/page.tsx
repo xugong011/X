@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { products } from "@/data/products";
 import { CATEGORY_LABELS, type Category } from "@/types/product";
 import ProductGrid from "@/components/product/ProductGrid";
@@ -14,6 +15,9 @@ const FILTERS: { key: Category | "all"; label: string }[] = [
   { key: "knit", label: "针织" },
   { key: "accessory", label: "配饰" },
 ];
+
+// 热门搜索词（标签云）
+const HOT_WORDS = ["连衣裙", "真丝", "显瘦", "通勤", "国风", "外套", "配饰", "高级感"];
 
 type SortKey = "default" | "price-asc" | "price-desc" | "new";
 
@@ -73,6 +77,31 @@ export default function CollectionPage() {
       <p className="mt-3 text-sm text-cocoa-light">
         {currentLabel} · 共 {filtered.length} 件
       </p>
+
+      {/* 大家都在搜（热门搜索词标签云） */}
+      <div className="mt-6 flex flex-wrap items-center gap-2">
+        <span className="text-xs tracking-widest text-cocoa-light">大家都在搜：</span>
+        {HOT_WORDS.map((w) => (
+          <button
+            key={w}
+            type="button"
+            onClick={() => setKeyword(w)}
+            className={`border px-3 py-1 text-xs transition ${
+              keyword === w
+                ? "border-brand-500 bg-brand-500 text-white"
+                : "border-brand-200 bg-white text-cocoa-light hover:border-brand-500 hover:text-cocoa"
+            }`}
+          >
+            {w}
+          </button>
+        ))}
+        <Link
+          href="/compare"
+          className="ml-auto text-xs text-cocoa-light underline underline-offset-4 transition-colors hover:text-cocoa"
+        >
+          商品对比 →
+        </Link>
+      </div>
 
       {/* 搜索 + 排序 */}
       <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">

@@ -2,14 +2,20 @@
 
 import { useWishlist } from "@/components/wishlist/WishlistProvider";
 
-export default function WishlistButton({ slug }: { slug: string }) {
+export default function WishlistButton({
+  slug,
+  price,
+}: {
+  slug: string;
+  price?: number;
+}) {
   const { toggle, has } = useWishlist();
   const liked = has(slug);
 
   return (
     <button
       type="button"
-      onClick={() => toggle(slug)}
+      onClick={() => toggle(slug, price)}
       aria-label={liked ? "取消收藏" : "加入收藏"}
       title={liked ? "已收藏" : "加入收藏"}
       className="relative flex h-10 w-10 items-center justify-center text-cocoa transition-colors hover:text-brand-500"
