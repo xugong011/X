@@ -16,6 +16,18 @@ export const products: Product[] = [
     tags: ["新品", "国风", "显瘦"],
     featured: true,
     image: "/images/products/plain-white-collar-dress.jpg",
+    images: [
+      "/images/products/plain-white-collar-dress.jpg",
+      "/images/products/plain-white-collar-dress-detail.jpg",
+    ],
+    sizeChart: {
+      headers: ["尺码", "胸围(cm)", "腰围(cm)", "衣长(cm)"],
+      rows: [
+        ["S", "84", "66", "115"],
+        ["M", "88", "70", "117"],
+        ["L", "92", "74", "119"],
+      ],
+    },
   },
   {
     slug: "ink-slip-dress",
@@ -30,6 +42,18 @@ export const products: Product[] = [
     tags: ["丝缎", "显瘦", "气质"],
     featured: true,
     image: "/images/products/ink-slip-dress.jpg",
+    images: [
+      "/images/products/ink-slip-dress.jpg",
+      "/images/products/ink-slip-dress-detail.jpg",
+    ],
+    sizeChart: {
+      headers: ["尺码", "胸围(cm)", "腰围(cm)", "衣长(cm)"],
+      rows: [
+        ["S", "82", "64", "110"],
+        ["M", "86", "68", "112"],
+        ["L", "90", "72", "114"],
+      ],
+    },
   },
   {
     slug: "silk-cloud-shirt",
@@ -44,6 +68,19 @@ export const products: Product[] = [
     tags: ["真丝", "通勤", "简约"],
     featured: true,
     image: "/images/products/silk-cloud-shirt.jpg",
+    images: [
+      "/images/products/silk-cloud-shirt.jpg",
+      "/images/products/silk-cloud-shirt-detail.jpg",
+    ],
+    sizeChart: {
+      headers: ["尺码", "胸围(cm)", "肩宽(cm)", "衣长(cm)", "袖长(cm)"],
+      rows: [
+        ["S", "96", "42", "68", "58"],
+        ["M", "100", "43", "70", "59"],
+        ["L", "104", "44", "72", "60"],
+        ["XL", "108", "45", "74", "61"],
+      ],
+    },
   },
   {
     slug: "charcoal-turtleneck",
@@ -58,6 +95,18 @@ export const products: Product[] = [
     tags: ["基础款", "百搭"],
     featured: false,
     image: "/images/products/charcoal-turtleneck.jpg",
+    images: [
+      "/images/products/charcoal-turtleneck.jpg",
+      "/images/products/charcoal-turtleneck-detail.jpg",
+    ],
+    sizeChart: {
+      headers: ["尺码", "胸围(cm)", "衣长(cm)", "袖长(cm)"],
+      rows: [
+        ["S", "80", "60", "56"],
+        ["M", "84", "62", "57"],
+        ["L", "88", "64", "58"],
+      ],
+    },
   },
   {
     slug: "ink-a-line-skirt",
@@ -72,6 +121,18 @@ export const products: Product[] = [
     tags: ["显高", "百搭"],
     featured: true,
     image: "/images/products/ink-a-line-skirt.jpg",
+    images: [
+      "/images/products/ink-a-line-skirt.jpg",
+      "/images/products/ink-a-line-skirt-detail.jpg",
+    ],
+    sizeChart: {
+      headers: ["尺码", "腰围(cm)", "裙长(cm)"],
+      rows: [
+        ["S", "64", "78"],
+        ["M", "68", "80"],
+        ["L", "72", "82"],
+      ],
+    },
   },
   {
     slug: "ivory-pleated-skirt",
@@ -86,6 +147,18 @@ export const products: Product[] = [
     tags: ["温柔", "显白"],
     featured: false,
     image: "/images/products/ivory-pleated-skirt.jpg",
+    images: [
+      "/images/products/ivory-pleated-skirt.jpg",
+      "/images/products/ivory-pleated-skirt-detail.jpg",
+    ],
+    sizeChart: {
+      headers: ["尺码", "腰围(cm)", "裙长(cm)"],
+      rows: [
+        ["S", "64", "80"],
+        ["M", "68", "82"],
+        ["L", "72", "84"],
+      ],
+    },
   },
   {
     slug: "smoke-blazer",
@@ -101,6 +174,17 @@ export const products: Product[] = [
     tags: ["廓形", "通勤", "高级感"],
     featured: true,
     image: "/images/products/smoke-blazer.jpg",
+    images: [
+      "/images/products/smoke-blazer.jpg",
+      "/images/products/smoke-blazer-detail.jpg",
+    ],
+    sizeChart: {
+      headers: ["尺码", "胸围(cm)", "肩宽(cm)", "衣长(cm)", "袖长(cm)"],
+      rows: [
+        ["S", "108", "46", "72", "60"],
+        ["M", "112", "47", "74", "61"],
+      ],
+    },
   },
   {
     slug: "noir-long-coat",
@@ -115,6 +199,18 @@ export const products: Product[] = [
     tags: ["长款", "大气", "高级感"],
     featured: true,
     image: "/images/products/noir-long-coat.jpg",
+    images: [
+      "/images/products/noir-long-coat.jpg",
+      "/images/products/noir-long-coat-detail.jpg",
+    ],
+    sizeChart: {
+      headers: ["尺码", "胸围(cm)", "肩宽(cm)", "衣长(cm)", "袖长(cm)"],
+      rows: [
+        ["S", "110", "44", "112", "58"],
+        ["M", "114", "45", "114", "59"],
+        ["L", "118", "46", "116", "60"],
+      ],
+    },
   },
   {
     slug: "mist-knit-cardigan",
@@ -129,6 +225,14 @@ export const products: Product[] = [
     tags: ["慵懒风", "百搭"],
     featured: true,
     image: "/images/products/mist-knit-cardigan.jpg",
+    images: [
+      "/images/products/mist-knit-cardigan.jpg",
+      "/images/products/mist-knit-cardigan-detail.jpg",
+    ],
+    sizeChart: {
+      headers: ["尺码", "胸围(cm)", "衣长(cm)", "袖长(cm)"],
+      rows: [["均码", "110", "68", "58"]],
+    },
   },
   {
     slug: "ash-turtleneck",
@@ -143,6 +247,18 @@ export const products: Product[] = [
     tags: ["保暖", "简约"],
     featured: false,
     image: "/images/products/ash-turtleneck.jpg",
+    images: [
+      "/images/products/ash-turtleneck.jpg",
+      "/images/products/ash-turtleneck-detail.jpg",
+    ],
+    sizeChart: {
+      headers: ["尺码", "胸围(cm)", "衣长(cm)", "袖长(cm)"],
+      rows: [
+        ["S", "96", "64", "57"],
+        ["M", "100", "66", "58"],
+        ["L", "104", "68", "59"],
+      ],
+    },
   },
   {
     slug: "silver-drop-earrings",
@@ -157,6 +273,10 @@ export const products: Product[] = [
     tags: ["配饰", "简约"],
     featured: false,
     image: "/images/products/silver-drop-earrings.jpg",
+    images: [
+      "/images/products/silver-drop-earrings.jpg",
+      "/images/products/silver-drop-earrings-detail.jpg",
+    ],
   },
   {
     slug: "ink-silk-hair-ribbon",
@@ -171,6 +291,10 @@ export const products: Product[] = [
     tags: ["配饰", "发饰", "国风"],
     featured: false,
     image: "/images/products/ink-silk-hair-ribbon.jpg",
+    images: [
+      "/images/products/ink-silk-hair-ribbon.jpg",
+      "/images/products/ink-silk-hair-ribbon-detail.jpg",
+    ],
   },
 ];
 

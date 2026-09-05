@@ -5,6 +5,7 @@ import Link from "next/link";
 import { navLinks, siteConfig } from "@/data/site";
 import MobileMenu from "./MobileMenu";
 import { useCart } from "@/components/cart/CartProvider";
+import { useWishlist } from "@/components/wishlist/WishlistProvider";
 
 function CartIcon() {
   return (
@@ -25,9 +26,28 @@ function CartIcon() {
   );
 }
 
+function HeartIcon() {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+    </svg>
+  );
+}
+
 export default function Header() {
   const [open, setOpen] = useState(false);
   const { totalQuantity } = useCart();
+  const { count: wishlistCount } = useWishlist();
 
   const cartTrigger = (
     <Link
@@ -44,6 +64,21 @@ export default function Header() {
     </Link>
   );
 
+  const wishlistTrigger = (
+    <Link
+      href="/wishlist"
+      aria-label={`心愿单，共 ${wishlistCount} 件`}
+      className="relative flex h-10 w-10 items-center justify-center text-cocoa transition-colors hover:text-cocoa-light"
+    >
+      <HeartIcon />
+      {wishlistCount > 0 && (
+        <span className="absolute right-0 top-0 flex h-4 min-w-4 items-center justify-center rounded-full bg-brand-500 px-1 text-[10px] leading-none text-white">
+          {wishlistCount}
+        </span>
+      )}
+    </Link>
+  );
+
   return (
     <header className="sticky top-0 z-50 border-b border-brand-200 bg-[#fafafa]/90 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
@@ -52,7 +87,7 @@ export default function Header() {
         </Link>
 
         {/* 桌面端导航 */}
-        <div className="hidden items-center gap-10 text-xs md:flex">
+        <div className="hidden items-center gap-8 text-xs md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -62,11 +97,13 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          {wishlistTrigger}
           {cartTrigger}
         </div>
 
-        {/* 移动端：购物车 + 汉堡 */}
-        <div className="flex items-center gap-1 md:hidden">
+        {/* 移动端：心愿单 + 购物车 + 汉堡 */}
+        <div className="flex items-center md:hidden">
+          {wishlistTrigger}
           {cartTrigger}
           <button
             type="button"

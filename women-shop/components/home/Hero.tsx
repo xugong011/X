@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { siteConfig } from "@/data/site";
 import Button from "@/components/ui/Button";
 
@@ -23,16 +24,16 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* 主视觉占位 */}
+      {/* 主视觉 */}
       <div className="relative aspect-[4/5] w-full overflow-hidden bg-brand-100">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="select-none font-display text-6xl tracking-[0.25em] text-brand-300">
-            {siteConfig.name}
-          </span>
-        </div>
-        <span className="absolute bottom-6 right-7 text-xs tracking-[0.2em] text-cocoa-light">
-          主视觉预留位
-        </span>
+        <Image
+          src="/images/hero-main.jpg"
+          alt={`${siteConfig.name} 主视觉`}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover"
+          priority
+        />
       </div>
     </section>
   );

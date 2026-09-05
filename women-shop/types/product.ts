@@ -16,6 +16,13 @@ export interface Product {
   tags: string[];
   /** 商品图路径（放在 public/images/products/ 下）；留空则显示渐变占位 */
   image?: string;
+  /** 商品多图（含主图），用于详情页轮播；若为空则使用 image */
+  images?: string[];
+  /** 尺码对照表（可选），首行为表头 */
+  sizeChart?: {
+    headers: string[];
+    rows: string[][];
+  };
   /** 是否为首页精选 */
   featured?: boolean;
 }
