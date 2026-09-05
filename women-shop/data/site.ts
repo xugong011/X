@@ -5,9 +5,9 @@ export const siteConfig = {
   slogan: "水墨留白 · 黑白极简女装",
   intro:
     "一家专注东方留白美学的小众女装店。以黑白灰为底色，去繁就简，只为你挑那些干净、耐看、经得起时间的好衣裳。",
-  wechat: "Xigongfu_Official",
-  phone: "138-0000-0000",
-  address: "上海市静安区常德路 88 号",
+  wechat: "Z13829017290",
+  phone: "138-2901-7290",
+  address: "景德镇艺术职业大学",
   email: "hello@xigongfu.com",
   hours: "每天 10:00 - 22:00",
 };
